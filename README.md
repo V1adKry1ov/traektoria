@@ -2,5 +2,7 @@
 
 ## Project setup and compiles
 
+```
 npm install
 npm run serve
+```
