@@ -1,32 +1,51 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="navbar">
+      <div class="logo">
+        <img src="./assets/logo.png" alt="Logo" class="pic" />
+      </div>
+      <router-link to="/">
+        <h2 class="navbar__title">Home</h2>
+      </router-link>
     </div>
-    <router-view />
+    <div class="wrapper">
+      <router-view />
+    </div>
   </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+html {
 }
-
-#nav {
-  padding: 30px;
+body {
+  background: #f2f2f2;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background: white;
+  box-shadow: 0 30px 30px rgb(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+}
+.navbar__title {
+  color: #333333;
+  font-size: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #4343aa;
+}
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pic {
+  width: 80px;
 }
 </style>
